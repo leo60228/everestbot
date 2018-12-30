@@ -43,21 +43,9 @@ wanted_jsons = ["data/restrictions.json",
                 "data/userlog.json"]
 
 initial_extensions = ['cogs.common',
-                      'cogs.admin',
-                      'cogs.verification',
-                      'cogs.mod',
-                      'cogs.mod_note',
-                      'cogs.mod_reacts',
-                      'cogs.mod_userlog',
-                      'cogs.mod_timed',
                       'cogs.basic',
-                      'cogs.logs',
-                      'cogs.err',
-                      'cogs.lockdown',
-                      'cogs.legacy',
-                      'cogs.links',
-                      'cogs.robocronp',
-                      'cogs.meme']
+                      'cogs.meme',
+                      'cogs.everestpins']
 
 bot = commands.Bot(command_prefix=get_prefix,
                    description=config.bot_description, pm_help=True)
@@ -86,15 +74,6 @@ async def on_ready():
     log.info(f'\nLogged in as: {bot.user.name} - '
              f'{bot.user.id}\ndpy version: {discord.__version__}\n')
     game_name = f"{config.prefixes[0]}help"
-
-    # Send "Robocop has started! x has y members!"
-    log_channel = bot.get_channel(config.log_channel)
-    guild = log_channel.guild
-    msg = f"{bot.user.name} has started! "\
-          f"{guild.name} has {guild.member_count} members!"
-
-    config_files = [discord.File(fpath) for fpath in wanted_jsons]
-    await log_channel.send(msg, files=config_files)
 
     await bot.change_presence(activity=discord.Game(name=game_name))
 
@@ -170,9 +149,6 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_message(message):
     if message.author.bot:
-        return
-
-    if (message.guild) and (message.guild.id not in config.guild_whitelist):
         return
 
     ctx = await bot.get_context(message)

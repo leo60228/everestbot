@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 import math
 from helpers.checks import check_if_staff_or_ot
-
+import asyncio
 
 class Meme:
     """
@@ -45,12 +45,6 @@ class Meme:
 
     @commands.check(check_if_staff_or_ot)
     @commands.command(hidden=True)
-    async def yahaha(self, ctx):
-        """secret command"""
-        await ctx.send(f"🍂 you found me 🍂")
-
-    @commands.check(check_if_staff_or_ot)
-    @commands.command(hidden=True)
     async def bones(self, ctx):
         await ctx.send("https://cdn.discordapp.com/emojis/"
                        "443501365843591169.png?v=1")
@@ -67,10 +61,25 @@ class Meme:
         await ctx.send("There's like, uhhhhh a bunch")
 
     @commands.command(hidden=True)
-    async def frolics(self, ctx):
-        """test"""
-        await ctx.send("https://www.youtube.com/watch?v=VmarNEsjpDI")
-
+    async def justmonika(self, ctx):
+        """Take 3 guesses... well, 20."""
+        chance = random.randint(0, 19)
+        if chance == 0:
+            await ctx.send("https://ddlc.moe")
+        elif chance <= 8:
+            tmp = await ctx.send("Just Monika. Just Monika. Just Monika. Just Monika. Justttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt")
+            await asyncio.sleep(3)
+            await tmp.edit(content="Just Monika.")
+        elif chance <= 10:
+            await ctx.send("[SarCATstic is upset.]")
+        elif chance <= 12:
+            await ctx.send("[0x0ade is upset.]")
+        elif chance <= 18:
+            tmp = await ctx.send("You can't make me.")
+            await asyncio.sleep(10)
+            await tmp.edit(content="🅸 🅲🅷🅰🅽🅶🅴🅳 🅼🆈 🅼🅸🅽🅳. 🅹🆄🆂🆃 🅼🅾🅽🅸🅺🅰")
+        else:
+            await ctx.send("<a:monikadefaultdance:529075909651726346>")
 
 def setup(bot):
     bot.add_cog(Meme(bot))

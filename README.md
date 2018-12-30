@@ -1,3 +1,6 @@
+# EverestBot
+Fork of Robocop-ng for the Celeste Discord. WIP. Original README follows:
+
 # Robocop-ng
 
 Next-gen rewrite of Kurisu/Robocop bot used on ReSwitched bot with discord.py rewrite, designed to be relatively clean, consistent and un-bloated.

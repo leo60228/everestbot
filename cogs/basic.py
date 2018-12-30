@@ -14,12 +14,20 @@ class Basic:
         await ctx.send(f"Hello {ctx.author.mention}!")
 
     @commands.command()
+    async def modrules(self, ctx, *, targetuser: discord.Member = None):
+        """Post a link to the Rules"""
+        if not targetuser:
+            targetuser = ctx.author
+        await ctx.send(f"{targetuser.mention}: The rules for the modding section "
+                       f"can be found here: #modding_welcome")
+
+    @commands.command()
     async def rules(self, ctx, *, targetuser: discord.Member = None):
         """Post a link to the Rules"""
         if not targetuser:
             targetuser = ctx.author
-        await ctx.send(f"{targetuser.mention}: A link to the rules "
-                       f"can be found here: {config.rules_url}")
+        await ctx.send(f"{targetuser.mention}: The rules for the server "
+                       f"can be found here: #welcome")
 
     @commands.guild_only()
     @commands.command()
@@ -33,9 +41,9 @@ class Basic:
         """Gives link to source code."""
         await ctx.send("You can find my source at " +
                        config.source_url +
-                       ". Serious PRs and issues welcome!")
+                       ".")
 
-    @commands.command(aliases=["robocopng", "robocop-ng"])
+    @commands.command(aliases=["robocopng", "robocop-ng", "everestbot"])
     async def robocop(self, ctx):
         """Shows a quick embed with bot info."""
         embed = discord.Embed(title="Robocop-NG",

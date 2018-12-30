@@ -1,5 +1,7 @@
-git+https://github.com/Rapptz/discord.py@rewrite
+git+https://github.com/Rapptz/discord.py@dec14faea90b57d34245b17e58438ee91990764c#egg=discord.py
 
 asyncio
 python-dateutil
 humanize
+
+setuptools-scm
