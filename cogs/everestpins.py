@@ -31,5 +31,9 @@ class EverestPins:
     async def codemods(self, ctx):
         await ctx.send(embed=discord.Embed(title="Codemodding Tutorial", url="https://everestapi.github.io/tutorials/firstcodemod.html", description="Tutorial on how to modify the game's code"))
 
+    @commands.command()
+    async def piracy(self, ctx):
+        await ctx.send("Everest does not support pirated copies of the game. These are banned on the server, and are often too outdated for many maps. Please purchase the game legitimately.")
+
 def setup(bot):
     bot.add_cog(EverestPins(bot))
