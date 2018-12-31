@@ -10,5 +10,5 @@ def check_if_bot_manager(ctx):
 def check_if_staff_or_ot(ctx):
     if not ctx.guild:
         return True
-    is_meme = (ctx.channel.name == "meme_line" || ctx.channel.name == "modding_irl")
+    is_meme = (ctx.channel.name == "meme_line" or ctx.channel.name == "modding_irl")
     return is_meme
