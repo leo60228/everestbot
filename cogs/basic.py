@@ -13,21 +13,21 @@ class Basic:
         """Says hello. Duh."""
         await ctx.send(f"Hello {ctx.author.mention}!")
 
-    @commands.command()
-    async def modrules(self, ctx, *, targetuser: discord.Member = None):
-        """Post a link to the Rules"""
-        if not targetuser:
-            targetuser = ctx.author
-        await ctx.send(f"{targetuser.mention}: The rules for the modding section "
-                       f"can be found here: #modding_welcome")
+    #@commands.command()
+    #async def modrules(self, ctx, *, targetuser: discord.Member = None):
+    #    """Post a link to the Rules"""
+    #    if not targetuser:
+    #        targetuser = ctx.author
+    #    await ctx.send(f"{targetuser.mention}: The rules for the modding section "
+    #                   f"can be found here: #modding_welcome")
 
-    @commands.command()
-    async def rules(self, ctx, *, targetuser: discord.Member = None):
-        """Post a link to the Rules"""
-        if not targetuser:
-            targetuser = ctx.author
-        await ctx.send(f"{targetuser.mention}: The rules for the server "
-                       f"can be found here: #welcome")
+    #@commands.command()
+    #async def rules(self, ctx, *, targetuser: discord.Member = None):
+    #    """Post a link to the Rules"""
+    #    if not targetuser:
+    #        targetuser = ctx.author
+    #    await ctx.send(f"{targetuser.mention}: The rules for the server "
+    #                   f"can be found here: #welcome")
 
     @commands.guild_only()
     @commands.command()
