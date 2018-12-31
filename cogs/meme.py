@@ -55,11 +55,13 @@ class Meme:
         """Bams a user owo"""
         await ctx.send(f"{self.bot.escape_message(user)} is ̶n͢ow b̕&̡.̷ 👍̡")
 
+    @commands.check(check_if_staff_or_ot)
     @commands.command(hidden=True)
     async def memebercount(self, ctx):
         """Checks memeber count, as requested by dvdfreitag"""
         await ctx.send("There's like, uhhhhh a bunch")
 
+    @commands.check(check_if_staff_or_ot)
     @commands.command(hidden=True)
     async def justmonika(self, ctx):
         """Take 3 guesses... well, 20."""
