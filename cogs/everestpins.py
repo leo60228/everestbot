@@ -42,7 +42,7 @@ class EverestPins:
                                            "• [How do I modify the game's code?](https://everestapi.github.io/tutorials/firstcodemod.html)\n"
                                            "• [How do I install mods on PC?](https://github.com/EverestAPI/Resources/wiki/How-do-I-install-mods-on-PC%3F)\n"
                                            "• [How do I make maps on PC?](https://github.com/EverestAPI/Resources/wiki/How-do-I-make-maps-on-PC%3F)\n"
-                                           "• [How do I play Celeste with others over the internet? (GhostNet)]](https://github.com/EverestAPI/Resources/wiki/How-do-I-play-Celeste-with-others-over-the-internet%3F-%28GhostNet%29)\n"
+                                           "• [How do I play Celeste with others over the internet? (GhostNet)](https://github.com/EverestAPI/Resources/wiki/How-do-I-play-Celeste-with-others-over-the-internet%3F-%28GhostNet%29)\n"
                                            "• [What's going on with mods on Nintendo Switch?](https://github.com/EverestAPI/Resources/wiki/What%27s-going-on-with-mods-on-Nintendo-Switch%3F)"))
 
         embed.set_thumbnail(url="https://everestapi.github.io/logo.png")
