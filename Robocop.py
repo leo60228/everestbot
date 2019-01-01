@@ -75,7 +75,9 @@ async def on_ready():
              f'{bot.user.id}\ndpy version: {discord.__version__}\n')
     game_name = f"{config.prefixes[0]}help"
 
-    await bot.change_presence(activity=discord.Game(name=game_name))
+    activity = discord.Activity(name=game_name, type=discord.ActivityType.listening)
+
+    await bot.change_presence(activity=activity)
 
 
 @bot.event
